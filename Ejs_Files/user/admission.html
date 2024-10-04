@@ -1,0 +1,988 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>User Dashboard | Online Admission System</title>
+    <link
+      href="
+https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css
+"
+      rel="stylesheet"
+    />
+    <link
+      href="
+https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css
+"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="user_assets/css/userDashboard.css" />
+    <link rel="stylesheet" href="user_assets/css/userAdmission.css" />
+  </head>
+  <body>
+    <nav class="navbar bg-dark navbar-expand-md navigation py-4" id="navbar">
+      <div class="container-fluid">
+        <div class="logo d-flex align-items-center">
+          <a href="dashboard.html" class="text-decoration-none text-white">
+            Online Admission System
+          </a>
+        </div>
+
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="bi bi-list text-white fs-2" id="navTogglerOpen"></span>
+          <span class="bi bi-x text-white fs-2" id="navTogglerClose"></span>
+        </button>
+
+        <div
+          class="collapse navbar-collapse d-md-flex justify-content-start justify-content-md-end"
+          id="navbarNav"
+        >
+          <ul class="navbar-nav" id="ul-con">
+            <li class="nav-item">
+              <a
+                class="nav-link mx-0 mx-lg-3 text-white d-lg-block d-inline-block"
+                href="user_assets/pages/profile.html"
+                id="login"
+                >Profile</a
+              >
+            </li>
+            <li class="nav-item px-0 px-lg-3" id="register">
+              <a class="nav-link mx-0 mx-lg-3 text-white" href="#">Logout</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Sidebar -->
+    <div class="sidebar">
+      <a href="dashboard.html">Dashboard</a>
+      <a href="#">Admissions Department</a>
+      <a href="medical.html">Medical Department</a>
+      <a href="#">Settings</a>
+    </div>
+
+    <!-- Content -->
+    <div class="content">
+      <h2>Welcome to Admissions Department</h2>
+      <p>Make sure to fill all forms accordingly.</p>
+
+      <div class="container my-5">
+        <!-- Acceptance Form Section -->
+        <div class="form-section">
+          <h2>Acceptance Form</h2>
+          <form>
+            <!-- Candidate's Name -->
+            <div class="form-group">
+              <label for="name">Name of Candidate (in full)</label>
+              <input
+                type="text"
+                class="form-control"
+                id="name"
+                placeholder="Enter full name"
+                required
+              />
+            </div>
+
+            <!-- Sex -->
+            <div class="form-group">
+              <label for="sex">Sex</label>
+              <select class="form-control" id="sex" required>
+                <option value="">Select</option>
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+              </select>
+            </div>
+
+            <!-- Marital Status -->
+            <div class="form-group">
+              <label for="marital-status">Marital Status</label>
+              <input
+                type="text"
+                class="form-control"
+                id="marital-status"
+                placeholder="Enter marital status"
+                required
+              />
+            </div>
+
+            <!-- Contact Address -->
+            <div class="form-group">
+              <label for="contact-address">Contact Address</label>
+              <input
+                type="text"
+                class="form-control"
+                id="contact-address"
+                placeholder="Enter contact address"
+                required
+              />
+            </div>
+
+            <!-- Phone Number -->
+            <div class="form-group">
+              <label for="phone-number">Phone Number</label>
+              <input
+                type="tel"
+                class="form-control"
+                id="phone-number"
+                placeholder="Enter phone number"
+                required
+              />
+            </div>
+
+            <!-- Email Address -->
+            <div class="form-group">
+              <label for="email-address">Email Address</label>
+              <input
+                type="email"
+                class="form-control"
+                id="email-address"
+                placeholder="Enter email address"
+                required
+              />
+            </div>
+
+            <!-- Parent/Guardian's Name -->
+            <div class="form-group">
+              <label for="parent-name">Name of Parent/Guardian</label>
+              <input
+                type="text"
+                class="form-control"
+                id="parent-name"
+                placeholder="Enter parent/guardian name"
+                required
+              />
+            </div>
+
+            <!-- Parent/Guardian's Address -->
+            <div class="form-group">
+              <label for="parent-address">Address of Parent/Guardian</label>
+              <input
+                type="text"
+                class="form-control"
+                id="parent-address"
+                placeholder="Enter parent/guardian address"
+                required
+              />
+            </div>
+
+            <!-- School -->
+            <div class="form-group">
+              <label for="school">School</label>
+              <input
+                type="text"
+                class="form-control"
+                id="school"
+                placeholder="Enter school"
+                required
+              />
+            </div>
+
+            <!-- Department -->
+            <div class="form-group">
+              <label for="department">Department</label>
+              <input
+                type="text"
+                class="form-control"
+                id="department"
+                placeholder="Enter department"
+                required
+              />
+            </div>
+          </form>
+        </div>
+
+        <!-- Fees Payable Section -->
+        <div class="form-section">
+          <h2>Fees Payable (EN-BLOC) as Stipulated Below:</h2>
+          <form>
+            <!-- Amount -->
+            <div class="form-group">
+              <label for="amount">Amount</label>
+              <input
+                type="number"
+                class="form-control"
+                id="amount"
+                placeholder="Enter amount"
+                required
+              />
+            </div>
+
+            <!-- Remita Invoice No. -->
+            <div class="form-group">
+              <label for="remita-invoice">Remita Invoice No.</label>
+              <input
+                type="text"
+                class="form-control"
+                id="remita-invoice"
+                placeholder="Enter Remita invoice no."
+                required
+              />
+            </div>
+
+            <!-- Submit Button -->
+            <button type="submit" class="btn btn-custom btn-block">
+              Submit
+            </button>
+          </form>
+        </div>
+
+        <div class="form-section">
+          <h2>Student's Personal Data Form</h2>
+          <form>
+            <div class="form-row">
+              <div class="form-group col-md-6">
+                <label for="surname">Surname</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="surname"
+                  placeholder="Enter surname"
+                  required
+                />
+              </div>
+              <div class="form-group col-md-6">
+                <label for="othername">Othername</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="othername"
+                  placeholder="Enter othername"
+                  required
+                />
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="form-group col-md-6">
+                <label for="dob">Date of Birth</label>
+                <input type="date" class="form-control" id="dob" required />
+              </div>
+              <div class="form-group col-md-6">
+                <label for="pob">Place of Birth</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="pob"
+                  placeholder="Enter place of birth"
+                  required
+                />
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="form-group col-md-6">
+                <label for="state-origin">State of Origin</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="state-origin"
+                  placeholder="Enter state of origin"
+                  required
+                />
+              </div>
+              <div class="form-group col-md-6">
+                <label for="lga">L.G.A</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="lga"
+                  placeholder="Enter L.G.A"
+                  required
+                />
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="form-group col-md-6">
+                <label for="nationality">Nationality</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="nationality"
+                  placeholder="Enter nationality"
+                  required
+                />
+              </div>
+              <div class="form-group col-md-6">
+                <label for="religion">Religion</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="religion"
+                  placeholder="Enter religion"
+                  required
+                />
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="sex">Sex</label>
+              <select class="form-control" id="sex" required>
+                <option value="">Select</option>
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+              </select>
+            </div>
+
+            <div class="form-row">
+              <div class="form-group col-md-6">
+                <label for="phone">Phone Number</label>
+                <input
+                  type="tel"
+                  class="form-control"
+                  id="phone"
+                  placeholder="Enter phone number"
+                  required
+                />
+              </div>
+              <div class="form-group col-md-6">
+                <label for="email">Email Address</label>
+                <input
+                  type="email"
+                  class="form-control"
+                  id="email"
+                  placeholder="Enter email address"
+                  required
+                />
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="form-group col-md-6">
+                <label for="marital-status">Marital Status</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="marital-status"
+                  placeholder="Enter marital status"
+                  required
+                />
+              </div>
+              <div class="form-group col-md-6">
+                <label for="spouse">Name of Spouse</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="spouse"
+                  placeholder="Enter name of spouse"
+                />
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="perm-address">Permanent Home Address</label>
+              <input
+                type="text"
+                class="form-control"
+                id="perm-address"
+                placeholder="Enter permanent home address"
+                required
+              />
+            </div>
+
+            <div class="form-group">
+              <label for="curr-address">Current Home Address</label>
+              <input
+                type="text"
+                class="form-control"
+                id="curr-address"
+                placeholder="Enter current home address"
+                required
+              />
+            </div>
+
+            <div class="form-row">
+              <div class="form-group col-md-6">
+                <label for="next-kin">Name of Next of Kin</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="next-kin"
+                  placeholder="Enter name of next of kin"
+                  required
+                />
+              </div>
+              <div class="form-group col-md-6">
+                <label for="kin-address">Address of Next of Kin</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="kin-address"
+                  placeholder="Enter address of next of kin"
+                  required
+                />
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="form-group col-md-6">
+                <label for="kin-phone">Phone Number of Next of Kin</label>
+                <input
+                  type="tel"
+                  class="form-control"
+                  id="kin-phone"
+                  placeholder="Enter phone number of next of kin"
+                  required
+                />
+              </div>
+              <div class="form-group col-md-6">
+                <label for="kin-referees"
+                  >Names/ Addresses of 2 Referees/ Phone Numbers</label
+                >
+                <input
+                  type="text"
+                  class="form-control"
+                  id="kin-referees"
+                  placeholder="Enter names and addresses of referees"
+                  required
+                />
+              </div>
+            </div>
+          </form>
+        </div>
+
+        <!-- Students Clearance Form -->
+        <div class="form-section">
+          <h2>Students Clearance Form</h2>
+          <form>
+            <div class="form-group">
+              <label for="clearance">Upload a Copy of Clearance Form</label>
+              <input
+                type="file"
+                class="form-control-file"
+                id="clearance"
+                accept="image/*"
+                required
+              />
+            </div>
+          </form>
+        </div>
+
+        <!-- Application for Admission -->
+        <div class="form-section">
+          <h2>Application for Admission</h2>
+          <form>
+            <div class="form-group">
+              <label for="programme">Choice of Programme</label>
+              <select class="form-control" id="programme" required>
+                <option value="">Select</option>
+                <option value="regular">Regular</option>
+                <option value="part-time">Part-time</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="session">Session</label>
+              <select class="form-control" id="session" required>
+                <option value="">Select</option>
+                <option value="2024">2024/2025</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="jamb">JAMB Application Number</label>
+              <input
+                type="text"
+                class="form-control"
+                id="jamb"
+                placeholder="Enter JAMB application number"
+                required
+              />
+            </div>
+
+            <div class="form-group">
+              <label for="passport">Upload a Copy of Passport</label>
+              <input
+                type="file"
+                class="form-control-file"
+                id="passport"
+                accept="image/*"
+                required
+              />
+            </div>
+
+            <div class="form-group">
+              <label for="diploma">National Diploma</label>
+              <input
+                type="text"
+                class="form-control"
+                id="diploma"
+                placeholder="Enter National Diploma"
+                required
+              />
+            </div>
+
+            <!-- Personal Details Sub-Section -->
+            <h3>Personal Details</h3>
+            <div class="form-row">
+              <div class="form-group col-md-4">
+                <label for="surname-applicant"
+                  >Name of Applicant (Surname)</label
+                >
+                <input
+                  type="text"
+                  class="form-control"
+                  id="surname-applicant"
+                  placeholder="Enter surname"
+                  required
+                />
+              </div>
+              <div class="form-group col-md-4">
+                <label for="first-name">First Name</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="first-name"
+                  placeholder="Enter first name"
+                  required
+                />
+              </div>
+              <div class="form-group col-md-4">
+                <label for="other-names">Other Names</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="other-names"
+                  placeholder="Enter other names"
+                />
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="maiden-name"
+                >Maiden Names (for married women only)</label
+              >
+              <input
+                type="text"
+                class="form-control"
+                id="maiden-name"
+                placeholder="Enter maiden name"
+              />
+            </div>
+
+            <div class="form-group">
+              <label for="previous-names">Previous Names (if any)</label>
+              <input
+                type="text"
+                class="form-control"
+                id="previous-names"
+                placeholder="Enter previous names"
+              />
+            </div>
+
+            <div class="form-row">
+              <div class="form-group col-md-6">
+                <label for="dob-applicant">Date of Birth</label>
+                <input
+                  type="date"
+                  class="form-control"
+                  id="dob-applicant"
+                  required
+                />
+              </div>
+              <div class="form-group col-md-6">
+                <label for="marital-status-applicant">Marital Status</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="marital-status-applicant"
+                  placeholder="Enter marital status"
+                  required
+                />
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="form-group col-md-6">
+                <label for="nationality-applicant">Nationality</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="nationality-applicant"
+                  placeholder="Enter nationality"
+                  required
+                />
+              </div>
+              <div class="form-group col-md-6">
+                <label for="state-origin-applicant">State of Origin</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="state-origin-applicant"
+                  placeholder="Enter state of origin"
+                  required
+                />
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="form-group col-md-6">
+                <label for="lga-applicant">Local Govt. Area</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="lga-applicant"
+                  placeholder="Enter Local Govt. Area"
+                  required
+                />
+              </div>
+              <div class="form-group col-md-6">
+                <label for="senatorial-district">Senatorial District</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="senatorial-district"
+                  placeholder="Enter Senatorial District"
+                />
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="home-town">Home Town</label>
+              <input
+                type="text"
+                class="form-control"
+                id="home-town"
+                placeholder="Enter home town"
+              />
+            </div>
+
+            <div class="form-row">
+              <div class="form-group col-md-6">
+                <label for="contact-address">Contact Address</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="contact-address"
+                  placeholder="Enter contact address"
+                  required
+                />
+              </div>
+              <div class="form-group col-md-6">
+                <label for="phone-applicant">Phone Number</label>
+                <input
+                  type="tel"
+                  class="form-control"
+                  id="phone-applicant"
+                  placeholder="Enter phone number"
+                  required
+                />
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="email-applicant">Email Address</label>
+              <input
+                type="email"
+                class="form-control"
+                id="email-applicant"
+                placeholder="Enter email address"
+                required
+              />
+            </div>
+
+            <div class="form-row">
+              <div class="form-group col-md-6">
+                <label for="next-kin-applicant">Next of Kin</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="next-kin-applicant"
+                  placeholder="Enter name of next of kin"
+                  required
+                />
+              </div>
+              <div class="form-group col-md-6">
+                <label for="kin-address-applicant"
+                  >Address of Next of Kin</label
+                >
+                <input
+                  type="text"
+                  class="form-control"
+                  id="kin-address-applicant"
+                  placeholder="Enter address of next of kin"
+                  required
+                />
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="form-group col-md-6">
+                <label for="kin-phone-applicant"
+                  >Phone Number of Next of Kin</label
+                >
+                <input
+                  type="tel"
+                  class="form-control"
+                  id="kin-phone-applicant"
+                  placeholder="Enter phone number of next of kin"
+                  required
+                />
+              </div>
+              <div class="form-group col-md-6">
+                <label for="kin-email-applicant"
+                  >Email Address of Next of Kin</label
+                >
+                <input
+                  type="email"
+                  class="form-control"
+                  id="kin-email-applicant"
+                  placeholder="Enter email address of next of kin"
+                  required
+                />
+              </div>
+            </div>
+
+            <!-- Academic Record Sub-Section -->
+            <h3>Academic Record</h3>
+            <p>Post primary institution attended with dates</p>
+            <div class="form-group">
+              <label for="institution-name">Name of Institution</label>
+              <input
+                type="text"
+                class="form-control"
+                id="institution-name"
+                placeholder="Enter institution name"
+                required
+              />
+            </div>
+
+            <div class="form-group">
+              <label for="institution-address">Address of Institution</label>
+              <input
+                type="text"
+                class="form-control"
+                id="institution-address"
+                placeholder="Enter institution address"
+                required
+              />
+            </div>
+
+            <div class="form-row">
+              <div class="form-group col-md-6">
+                <label for="start-date">Start Date</label>
+                <input
+                  type="date"
+                  class="form-control"
+                  id="start-date"
+                  required
+                />
+              </div>
+              <div class="form-group col-md-6">
+                <label for="end-date">End Date</label>
+                <input
+                  type="date"
+                  class="form-control"
+                  id="end-date"
+                  required
+                />
+              </div>
+            </div>
+
+            <!-- Qualifications Sub-Section -->
+            <h3>Qualifications</h3>
+            <p>Qualifications accepted are WAEC, NECO, and GCE</p>
+
+            <div class="form-row">
+              <div class="form-group col-md-4">
+                <label for="subject1">Subject One</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="subject1"
+                  placeholder="Enter subject one"
+                  required
+                />
+              </div>
+              <div class="form-group col-md-4">
+                <label for="subject2">Subject Two</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="subject2"
+                  placeholder="Enter subject two"
+                  required
+                />
+              </div>
+              <div class="form-group col-md-4">
+                <label for="subject3">Subject Three</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="subject3"
+                  placeholder="Enter subject three"
+                  required
+                />
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="form-group col-md-4">
+                <label for="subject4">Subject Four</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="subject4"
+                  placeholder="Enter subject four"
+                />
+              </div>
+              <div class="form-group col-md-4">
+                <label for="subject5">Subject Five</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="subject5"
+                  placeholder="Enter subject five"
+                />
+              </div>
+              <div class="form-group col-md-4">
+                <label for="subject6">Subject Six</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="subject6"
+                  placeholder="Enter subject six"
+                />
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="form-group col-md-4">
+                <label for="subject7">Subject Seven</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="subject7"
+                  placeholder="Enter subject seven"
+                />
+              </div>
+              <div class="form-group col-md-4">
+                <label for="subject8">Subject Eight</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="subject8"
+                  placeholder="Enter subject eight"
+                />
+              </div>
+              <div class="form-group col-md-4">
+                <label for="subject9">Subject Nine</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="subject9"
+                  placeholder="Enter subject nine"
+                />
+              </div>
+              <div class="form-row">
+                <div class="form-group col-md-6">
+                  <label for="exam-date">Exam Date</label>
+                  <input
+                    type="date"
+                    class="form-control"
+                    id="exam-date"
+                    required
+                  />
+                </div>
+                <div class="form-group col-md-3">
+                  <label for="exam-centre">Centre</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="exam-centre"
+                    placeholder="Enter exam centre"
+                    required
+                  />
+                </div>
+                <div class="form-group col-md-3">
+                  <label for="exam-number">Exam Number</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="exam-number"
+                    placeholder="Enter exam number"
+                    required
+                  />
+                </div>
+              </div>
+
+              <div class="form-row">
+                <div class="form-group col-md-6">
+                  <label for="exam-date">Exam Date</label>
+                  <input
+                    type="date"
+                    class="form-control"
+                    id="exam-date"
+                    required
+                  />
+                </div>
+                <div class="form-group col-md-3">
+                  <label for="exam-centre">Centre</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="exam-centre"
+                    placeholder="Enter exam centre"
+                    required
+                  />
+                </div>
+                <div class="form-group col-md-3">
+                  <label for="exam-number">Exam Number</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="exam-number"
+                    placeholder="Enter exam number"
+                    required
+                  />
+                </div>
+              </div>
+
+              <!-- Submit Button -->
+              <button type="submit" class="btn btn-primary">
+                Submit Application
+              </button>
+            </div>
+          </form>
+        </div>
+
+        <!-- Clearance Form Section -->
+        <div class="container">
+          <h2>Students Clearance Form</h2>
+          <form>
+            <div class="form-group">
+              <label for="clearance-form"
+                >Upload a Copy of Clearance Form</label
+              >
+              <input
+                type="file"
+                class="form-control-file"
+                id="clearance-form"
+                accept="image/*"
+                required
+              />
+            </div>
+
+            <!-- Submit Button -->
+            <button type="submit" class="btn btn-secondary">
+              Submit Clearance Form
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+    <script src="
+https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js
+"></script>
+    <script src="user_assets/js/script.js"></script>
+  </body>
+</html>

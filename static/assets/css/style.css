@@ -1,0 +1,19 @@
+/* Color Palette */
+:root {
+  --primary-color: #0056b3;
+  --secondary-color: #ffc107;
+  --bg-color: #f8f9fa;
+  --text-color: #212529;
+  --button-hover-color: #004494;
+}
+
+.hero {
+  background: url(../img/francesco-ungaro-jbo-2kHn-tw-unsplash.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: calc(100vh - 88px);
+  position: absolute;
+  top: 88px;
+  width: 100%;
+}

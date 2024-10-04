@@ -1,0 +1,92 @@
+:root {
+  --primary-color: #0056b3;
+  --secondary-color: #ffc107;
+  --bg-color: #f8f9fa;
+  --text-color: #212529;
+  --button-hover-color: #004494;
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+}
+
+.navbar {
+  background-color: var(--primary-color);
+}
+
+.navbar-brand,
+.navbar-nav .nav-link {
+  color: white;
+}
+
+.sidebar {
+  background-color: var(--primary-color);
+  height: calc(100vh - 88px);
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  padding-top: 60px;
+  width: 250px;
+}
+
+.sidebar a {
+  color: white;
+  display: block;
+  padding: 15px;
+  text-decoration: none;
+}
+
+.sidebar a:hover {
+  background-color: var(--button-hover-color);
+}
+
+.content {
+  margin-left: 250px;
+  padding: 20px;
+}
+
+.card {
+  border: none;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.card-header {
+  background-color: var(--primary-color);
+  color: white;
+}
+
+.btn-secondary {
+  background-color: var(--secondary-color);
+  border-color: var(--secondary-color);
+  color: var(--text-color);
+}
+
+.btn-secondary:hover {
+  background-color: var(--button-hover-color);
+  border-color: var(--button-hover-color);
+  color: white;
+}
+
+@media (max-width: 768px) {
+  .sidebar {
+    width: 100%;
+    height: fit-content;
+    position: relative;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+
+  .content {
+    margin-left: 0;
+  }
+}
+
+@media (max-width: 576px) {
+  .sidebar a {
+    text-align: center;
+    float: none;
+  }
+}

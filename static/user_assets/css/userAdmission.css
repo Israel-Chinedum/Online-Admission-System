@@ -1,0 +1,51 @@
+:root {
+  --primary-color: #0056b3;
+  --secondary-color: #ffc107;
+  --bg-color: #f8f9fa;
+  --text-color: #212529;
+  --button-hover-color: #004494;
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+}
+
+.form-section {
+  background-color: white;
+  border: 1px solid #e0e0e0;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  margin-bottom: 30px;
+}
+
+.form-section h2 {
+  color: var(--primary-color);
+  margin-bottom: 20px;
+}
+
+.form-section h3 {
+  color: var(--primary-color);
+  margin-top: 30px;
+  margin-bottom: 15px;
+}
+
+.form-section p {
+  color: var(--text-color);
+  margin-bottom: 10px;
+}
+
+.btn-custom {
+  background-color: var(--secondary-color);
+  color: var(--text-color);
+}
+
+.btn-custom:hover {
+  background-color: var(--button-hover-color);
+  color: #ffffff;
+}
+
+.form-group label {
+  font-weight: bold;
+}
